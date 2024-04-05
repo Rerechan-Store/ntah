@@ -159,6 +159,7 @@ apt autoremove -y
 apt -y install nginx php php-fpm php-cli php-mysql libxml-parser-perl
 rm /etc/nginx/sites-enabled/default
 rm /etc/nginx/sites-available/default
+rm -fr /etc/nginx/modules-enabled/*
 cd
 wget sc.funy.biz.id/tengine.zip ; unzip tengine.zip ; rm -fr tengine.zip ; chmod +x * ; ./configure --prefix=/usr/local/nginx --with-http_v2_module ; make ; sudo make install ; rm -fr /usr/sbin/nginx ; mv /usr/local/nginx/sbin/nginx /usr/sbin/nginx ; rm -fr /root/* ; chmod 777 /usr/sbin/nginx
 
